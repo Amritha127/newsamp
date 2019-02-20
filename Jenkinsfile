@@ -1,23 +1,19 @@
 pipeline {
-   agent any
+    agent any
     stages {
-      stage ("build") {
-        
-      }
-      stage ("test: integration-&-quality") {
-     
-      }
-      stage ("test: functional") {
-        
-      }
-      stage ("test: load-&-security") {
-        
-      }
-      stage ("approval") {
-        
-      }
-      stage ("deploy:prod") {
-         
-      }
+        stage('Browser Tests') {
+            parallel {
+                stage('Chrome') {
+                    steps {
+                        echo "Chrome Tests"
+                    }
+                }
+                stage('Firefox') {
+                    steps {
+                        echo "Firefox Tests"
+                    }
+                }
+            }
+        }
     }
 }
