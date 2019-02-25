@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Browser Tests') {
+        stage('Clone') {
             parallel {
-                stage('Chrome') {
+                stage('svn') {
                     steps {
-                        echo "Chrome Tests"
+                        echo "chrome tests"
                     }
                 }
                 stage('Firefox') {
