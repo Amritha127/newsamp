@@ -18,6 +18,11 @@ pipeline {
                         echo "Internet Explorer Tests"
                     }
                 }
+                stage('Bing') {
+                    steps {
+                        echo "Bing Tests"
+                    }
+                }
             }
         }
     }
