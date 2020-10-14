@@ -13,6 +13,11 @@ pipeline {
                         echo "Firefox Tests"
                     }
                 }
+                stage('Internet Explorer') {
+                    steps {
+                        echo "Internet Explorer Tests"
+                    }
+                }
             }
         }
     }
